@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+   
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="secretConteiner">
+            <img class="topsecret" src="imagenes/topSecret.png" alt="Logo TopSecret">
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <textarea id="texto1" class="texto1" cols="30" rows="10" placeholder="Ingrese solo minúsculas y sin acento"></textarea>
+                <div class="botones">
+                    <button type="button" id="botonEncriptar" class="botonEncriptar">Encriptar</button>
+                    <button type="button" id="botonDesencriptar"class="botonDesencriptar">Desencriptar</button>
+                </div>
+            </section>
+            
+            <section>
+                <textarea id="texto2" class="texto2" cols="25" rows="15"></textarea>
+                    <div>
+                    <button type="button" id="botonCopiar" class="botonCopiar">Copiar</button>
+                    </div>
+            </section>
+        </main>
+        
+        <script>
+            document.getElementById("texto1").focus();
+
+            function encriptar (){
+            var texto = document.getElementById("texto1").value; 
+            var texto=texto.replace( /[iIí]/g, "imes")
+            var texto=texto.replace( /[eEé]/g, "enter")
+            var texto=texto.replace( /[oOó]/g, "ober")
+            var texto=texto.replace( /[aAá]/g, "ai")
+            var texto=texto.replace( /[uUú]/g, "ufat")
+            document.getElementById("texto2").value = texto;
+            document.getElementById("texto1").value = "";
+        }
+
+            function desencriptar(){
+            var codigo = document.getElementById("texto1").value;
+            var codigo = codigo.replaceAll("ufat", "u")
+            var codigo = codigo.replaceAll("ober", "o")
+            var codigo = codigo.replaceAll("imes", "i")
+            var codigo = codigo.replaceAll("enter", "e")
+            var codigo = codigo.replaceAll("ai", "a")
+            document.getElementById("texto2").value = codigo;
+            document.getElementById("texto1").value = "";
+        }
+    
+            function copiar (){
+                var copiar = document.getElementById("texto2").value;
+                document.getElementById("texto1").value = copiar;
+                document.getElementById("texto2").value = "";
+            }
+
+            var botonEncriptar = document.getElementById ("botonEncriptar");
+            botonEncriptar.onclick = encriptar;
+           
+            var botonDesencriptar = document.getElementById ("botonDesencriptar");
+            botonDesencriptar.onclick = desencriptar;
+            
+            var botonCopiar = document.getElementById ("botonCopiar");
+            botonCopiar.onclick = copiar;
+        
+        </script>
+        
+        <footer>
+            <div class="cutionContenedor">
+            <img class="caution" src="imagenes/caution.jpg" alt="Logo Caution">
+            </div>
+        </footer>
+        
+    </body>
+
+</html>

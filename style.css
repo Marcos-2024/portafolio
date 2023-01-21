@@ -1,0 +1,126 @@
+* {
+    font-family: 'Inter';
+    font-weight: 400;
+    font: 32px;
+    line-height: 150%;
+    background: whitesmoke;
+}
+
+.secretConteiner{
+    margin-left: 50px;
+}
+
+.topsecret{
+    width:25%;
+    position: absolute;
+    margin-top: 100px;
+}
+
+.alura{
+    right: 100%;
+    position:relative; left: 1000px;
+}
+
+.logoAlura{
+    width: 15%;
+    position: absolute;
+    margin: 15px;
+}
+
+main{
+    display: flex;
+    margin-bottom: 200px;
+    margin-left: 200px;
+    justify-content: center;
+    background: whitesmoke;
+}
+
+.texto1{
+    border: none;
+    color: black;
+    margin-top: 90px;
+    text-transform: lowercase;
+    background: white;
+    resize: none;
+    padding: 45px;
+    border-radius: 20px
+}
+
+::placeholder{color: black;}
+  .texto1:focus{
+    outline: none;
+  }
+
+.texto2{
+    background: rgb(223, 228, 245);
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    margin-left: 58px;
+    margin-top: 70px;
+    padding-left: 5px;
+    resize: none;
+    background-image: url("imagenes/alura\ 4.png");
+    background-repeat: no-repeat;
+    background-size: 200px;  
+}
+
+.texto2:focus{
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.botonDesencriptar{
+    background: rgb(73, 130, 236);
+    border: 1px solid rgb(15, 4, 36);
+    border-radius: 10px;
+    color:rgb(15, 4, 36);;
+    cursor:pointer;
+    height: 30px;
+    margin-left: 15px;
+    width: 150px;
+}
+
+.botonEncriptar{
+    background:  rgb(73, 130, 236);
+    border: 1px solid black;
+    border-radius: 10px;
+    color: rgb(15, 4, 36);
+    cursor:pointer;
+    height: 30px;
+    width: 150px;
+}
+
+.botonCopiar{
+    border: 1px solid black;
+    border-radius: 10px;
+    color: rgb(15, 4, 36);
+    cursor:pointer;
+    height: 30px;
+    width: 150px;
+    margin-left: 85px;
+    margin-top: 20px;
+    background: rgb(19, 148, 21);
+}
+
+.informacion{
+    color: black;
+    font-size: 18px;
+}
+
+.cutionContenedor{
+    margin-left: 600px;
+    position:relative; top: -180px;
+}
+
+.caution{
+    width: 40%;
+}
+
+
+
